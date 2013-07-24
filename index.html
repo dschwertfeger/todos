@@ -31,7 +31,21 @@
     <input class="edit" value="{{title}}">
   </script>
   <script type="text/x-handlebars-template" id="stats-template">
-    
+    <span id="todo-count"><strong>{{remaining}}</strong>{{#if remaining === 1}} "item" {{else}} "items" {{/if}} left</span>
+    <ul id="filters">
+      <li>
+        <a class="selected" href="#/">All</a>
+      </li>
+      <li>
+        <a href="#/active">Active</a>
+      </li>
+      <li>
+        <a href="#/completed">Completed</a>
+      </li>
+    </ul>
+    {{#if completed}}
+    <button id="clear-completed">Clear completed ({{completed}})</button>
+    {{/if}}
   </script>
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/lib/underscore-min.js"></script>
