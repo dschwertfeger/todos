@@ -22,8 +22,17 @@
   <div id="info">
     <p>Double-click to edit a todo</p>
   </div>
-  <script type="text/x-handlebars-template" id="item-template"></script>
-  <script type="text/x-handlebars-template" id="stats-template"></script>
+  <script type="text/x-handlebars-template" id="item-template">
+    <div class="view">
+      <input class="toggle" type="checkbox" {{#if completed}} "checked" {{/if}}>
+      <label>{{title}}</label>
+      <button class="destroy"></button>
+    </div>
+    <input class="edit" value="{{title}}">
+  </script>
+  <script type="text/x-handlebars-template" id="stats-template">
+    
+  </script>
   <script src="js/lib/jquery.min.js"></script>
   <script src="js/lib/underscore-min.js"></script>
   <script src="js/lib/backbone-min.js"></script>
