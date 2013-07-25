@@ -4,9 +4,9 @@ var app = app || {};
 app.TodoView = Backbone.View.extend({
 
   // ... is a list tag.
-  tagname: 'li',
+  tagName: 'li',
 
-  // Cache the template function for a singel item.
+  // Cache the template function for a single item.
   template: Handlebars.compile( $('#item-template').html() ),
 
   // The DOM events specific to an item.
@@ -26,7 +26,7 @@ app.TodoView = Backbone.View.extend({
 
   // Re-renders the titles of the todo item.
   render: function() {
-    this.$el.html( this.template (this.model.toJSON() ) );
+    this.$el.html( this.template( this.model.toJSON() ) );
     this.$input = this.$('.edit');
     return this;
   },

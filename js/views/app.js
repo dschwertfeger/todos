@@ -83,6 +83,15 @@ app.AppView = Backbone.View.extend({
     app.Todos.each(this.filterOne, this);
   },
 
+  // Generate the attributes for a new Todo item.
+  newAttributes: function() {
+    return {
+      title: this.$input.val().trim(),
+      order: app.Todos.nextOrder(),
+      completed: false
+    };
+  },
+
   // If you hit return in the main input field, create new Todo model,
   // persisting it to localStorage
   createOnEnter: function( event ) {
