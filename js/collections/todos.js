@@ -34,3 +34,6 @@ var TodoList = Backbone.Collection.extend({
     return todo.get('order');
   }
 });
+
+// Create our global collection of **Todos**.
+app.Todos = new TodoList();

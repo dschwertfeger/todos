@@ -31,7 +31,7 @@
     <input class="edit" value="{{title}}">
   </script>
   <script type="text/x-handlebars-template" id="stats-template">
-    <span id="todo-count"><strong>{{remaining}}</strong>{{#if remaining === 1}} "item" {{else}} "items" {{/if}} left</span>
+    <span id="todo-count"><strong>{{remaining}}</strong>{{#if_eq remaining compare=1}} "item" {{else}} "items" {{/if_eq}} left</span>
     <ul id="filters">
       <li>
         <a class="selected" href="#/">All</a>
@@ -52,6 +52,7 @@
   <script src="js/lib/backbone-min.js"></script>
   <script src="js/lib/backbone.localStorage.js"></script>
   <script src="js/lib/handlebars.js"></script>
+  <script src="js/helpers/handlebars-helpers.js"></script>
   <script src="js/models/todo.js"></script>
   <script src="js/collections/todos.js"></script>
   <script src="js/views/todos.js"></script>
